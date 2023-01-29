@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' href='https://cdn3.devexpress.com/jslib/22.2.3/css/dx.light.css'>
+    <title>Pagos CodePen</title>
+</head>
+
+<style>
+    .demo-container {
+        display: flex; /* para acomodar ambos elementos en una linea */
+    }
+
+    #bars, #pie {
+        width: 50%; /* para que ocupen el 50% del ancho del contenedor */
+    }
+</style>
+
+<body>
+
+
+
+    <div class="demo-container">
+        <div id="bars"></div>
+        <div id="pie"></div>
+    </div>
+
+    <!-- partial:index.partial.html -->
+    <div class="dx-viewport demo-container">
+        <div id="gridContainer"></div>
+    </div>
+
+
+
+
+
+    <!-- partial -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdn3.devexpress.com/jslib/22.2.3/js/dx.all.js'></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const idParametro = urlParams.get('id');
+        console.log(idParametro);
+
+        Promise.all([fetch('db/clientes.json'), fetch('db/pagos.json')])
+            .then(respuestas => Promise.all(respuestas.map(res => res.json())))
+            .then(datos => {
+                const clientes = datos[0];
+                const pagos = datos[1];
+
+                const pagosFiltrados = pagos.filter(pago => pago.cliente == idParametro)
+                console.log(pagosFiltrados[0])
+
+
+                //grid
+                $(() => {
+                    $('#gridContainer').dxDataGrid({
+                        dataSource: pagosFiltrados,
+                        keyExpr: 'ID',
+                        columns: [
+                            {
+                                dataField: 'ID',
+                                caption: 'Número de pago',
+                                alignment: 'center',
+                            },
+                            {
+                                dataField: 'fecha',
+                                alignment: 'center',
+                                caption: 'Fecha',
+                                dataType: 'date',
+                                format: "dd-MM-yyyy",
+                            },
+
+                            {
+                                dataField: 'cantidad',
+                                alignment: 'center',
+                                format: 'currency',
+                            },
+                            {
+                                dataField: 'formaPago',
+                                alignment: 'center',
+                                format: 'currency',
+                            },
+
+                        ],
+                        filterRow: {
+                            visible: true,
+                            applyFilter: 'auto',
+                        },
+                        searchPanel: {
+                            visible: true,
+                            width: 240,
+                            placeholder: 'Search...',
+                        },
+                        headerFilter: {
+                            visible: true,
+                        },
+                        allowColumnReordering: true,
+                        groupPanel: {
+                            visible: true,
+                        },
+                        columnAutoWidth: true,
+                        allowColumnResizing: true,
+                        showBorders: true,
+                        paging: {
+                            pageSize: 5,
+                        },
+                        pager: {
+                            visible: true,
+                            allowedPageSizes: [5, 10, 'all'],
+                            showPageSizeSelector: true,
+                            showInfo: true,
+                            showNavigationButtons: true,
+                        },
+
+
+
+                    });
+                });
+                //bars chart
+                const pagosXanio = pagosFiltrados.map(pago => {
+
+                    pago.anio = new Date(pago.fecha).getFullYear().toString()
+                    return pago
+                })
+
+                pagosXanio.sort(function (a, b) {
+                    return a.anio - b.anio;
+                });
+                console.log('hola')
+
+                $("#bars").dxChart({
+                    dataSource: pagosXanio,
+                    palette: 'soft',
+                    title: 'Pagos de cliente por año',
+
+                    commonSeriesSettings: {
+                        argumentField: "anio",
+                        valueField: "cantidad",
+                        name: "Cantidad",
+                        type: "bar",
+                        ignoreEmptyPoints: true,
+                    },
+                    argumentAxis: {
+                        label: {
+                            format: "year"
+                        }
+                    },
+
+                    seriesTemplate: {
+                        nameField: 'anio',
+                    },
+                    tooltip: {
+                        enabled: true,
+                        location: 'edge',
+                        customizeTooltip(arg) {
+                            return {
+                                text: `Pagos totales ${arg.value.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })}`,
+                            };
+                        },
+                    },
+
+
+                });
+
+
+
+
+
+
+                //pie chart
+                let formasDePago = pagos.reduce((acumulador, pago) => {
+                    if (!acumulador[pago.formaPago]) {
+                        acumulador[pago.formaPago] = 0;
+                    }
+                    acumulador[pago.formaPago] += pago.cantidad;
+                    return acumulador;
+                }, {});
+
+                $("#pie").dxPieChart({
+                    dataSource: Object.keys(formasDePago).map(formaPago => ({
+                        formaPago,
+                        cantidad: formasDePago[formaPago]
+                    })),
+                    palette: 'soft',
+                    title : 'Formas de pago',
+                    series: [{
+                        argumentField: "formaPago",
+                        valueField: "cantidad",
+                        label: {
+                            visible: true,
+                            format: {
+                                type: 'fixedPoint',
+                                precision: 2
+                            },
+                            customizeText: function (point) {
+                                return ` Porcentaje ${(point.percent * 100).toFixed(1)}%`;
+                            }
+                        },
+                    }]
+                });
+
+
+
+
+
+
+
+
+
+
+            })
+
+
+
+
+
+
+
+        /*                 */
+
+    </script>
+</body>
+
+</html>

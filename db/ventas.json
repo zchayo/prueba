@@ -1,0 +1,1402 @@
+[
+    {
+        "ID": 1,
+        "cliente": 9,
+        "producto": 6,
+        "cantidad": 7,
+        "fecha": "11/3/2021"
+    },
+    {
+        "ID": 2,
+        "cliente": 11,
+        "producto": 5,
+        "cantidad": 8,
+        "fecha": "3/18/2021"
+    },
+    {
+        "ID": 3,
+        "cliente": 5,
+        "producto": 1,
+        "cantidad": 6,
+        "fecha": "4/21/2019"
+    },
+    {
+        "ID": 4,
+        "cliente": 7,
+        "producto": 4,
+        "cantidad": 6,
+        "fecha": "8/26/2018"
+    },
+    {
+        "ID": 5,
+        "cliente": 7,
+        "producto": 3,
+        "cantidad": 5,
+        "fecha": "1/9/2021"
+    },
+    {
+        "ID": 6,
+        "cliente": 12,
+        "producto": 6,
+        "cantidad": 9,
+        "fecha": "9/6/2020"
+    },
+    {
+        "ID": 7,
+        "cliente": 5,
+        "producto": 4,
+        "cantidad": 10,
+        "fecha": "10/30/2020"
+    },
+    {
+        "ID": 8,
+        "cliente": 3,
+        "producto": 3,
+        "cantidad": 3,
+        "fecha": "3/2/2020"
+    },
+    {
+        "ID": 9,
+        "cliente": 11,
+        "producto": 5,
+        "cantidad": 4,
+        "fecha": "11/8/2022"
+    },
+    {
+        "ID": 10,
+        "cliente": 12,
+        "producto": 4,
+        "cantidad": 9,
+        "fecha": "12/13/2021"
+    },
+    {
+        "ID": 11,
+        "cliente": 9,
+        "producto": 3,
+        "cantidad": 8,
+        "fecha": "11/28/2020"
+    },
+    {
+        "ID": 12,
+        "cliente": 14,
+        "producto": 4,
+        "cantidad": 4,
+        "fecha": "9/13/2018"
+    },
+    {
+        "ID": 13,
+        "cliente": 3,
+        "producto": 6,
+        "cantidad": 8,
+        "fecha": "7/20/2022"
+    },
+    {
+        "ID": 14,
+        "cliente": 5,
+        "producto": 1,
+        "cantidad": 8,
+        "fecha": "11/17/2022"
+    },
+    {
+        "ID": 15,
+        "cliente": 11,
+        "producto": 4,
+        "cantidad": 4,
+        "fecha": "2/26/2018"
+    },
+    {
+        "ID": 16,
+        "cliente": 2,
+        "producto": 2,
+        "cantidad": 1,
+        "fecha": "6/28/2022"
+    },
+    {
+        "ID": 17,
+        "cliente": 6,
+        "producto": 3,
+        "cantidad": 9,
+        "fecha": "10/16/2020"
+    },
+    {
+        "ID": 18,
+        "cliente": 7,
+        "producto": 4,
+        "cantidad": 3,
+        "fecha": "12/28/2018"
+    },
+    {
+        "ID": 19,
+        "cliente": 10,
+        "producto": 4,
+        "cantidad": 2,
+        "fecha": "4/26/2020"
+    },
+    {
+        "ID": 20,
+        "cliente": 5,
+        "producto": 3,
+        "cantidad": 1,
+        "fecha": "4/19/2018"
+    },
+    {
+        "ID": 21,
+        "cliente": 13,
+        "producto": 2,
+        "cantidad": 5,
+        "fecha": "2/17/2018"
+    },
+    {
+        "ID": 22,
+        "cliente": 4,
+        "producto": 3,
+        "cantidad": 5,
+        "fecha": "8/2/2019"
+    },
+    {
+        "ID": 23,
+        "cliente": 6,
+        "producto": 5,
+        "cantidad": 9,
+        "fecha": "9/15/2020"
+    },
+    {
+        "ID": 24,
+        "cliente": 9,
+        "producto": 4,
+        "cantidad": 8,
+        "fecha": "9/7/2019"
+    },
+    {
+        "ID": 25,
+        "cliente": 11,
+        "producto": 2,
+        "cantidad": 10,
+        "fecha": "5/14/2020"
+    },
+    {
+        "ID": 26,
+        "cliente": 5,
+        "producto": 2,
+        "cantidad": 1,
+        "fecha": "10/6/2022"
+    },
+    {
+        "ID": 27,
+        "cliente": 10,
+        "producto": 3,
+        "cantidad": 2,
+        "fecha": "4/24/2022"
+    },
+    {
+        "ID": 28,
+        "cliente": 11,
+        "producto": 1,
+        "cantidad": 1,
+        "fecha": "12/1/2020"
+    },
+    {
+        "ID": 29,
+        "cliente": 1,
+        "producto": 4,
+        "cantidad": 2,
+        "fecha": "10/4/2022"
+    },
+    {
+        "ID": 30,
+        "cliente": 9,
+        "producto": 3,
+        "cantidad": 6,
+        "fecha": "8/21/2019"
+    },
+    {
+        "ID": 31,
+        "cliente": 7,
+        "producto": 3,
+        "cantidad": 6,
+        "fecha": "8/1/2020"
+    },
+    {
+        "ID": 32,
+        "cliente": 10,
+        "producto": 6,
+        "cantidad": 8,
+        "fecha": "5/2/2021"
+    },
+    {
+        "ID": 33,
+        "cliente": 2,
+        "producto": 3,
+        "cantidad": 8,
+        "fecha": "11/5/2018"
+    },
+    {
+        "ID": 34,
+        "cliente": 4,
+        "producto": 1,
+        "cantidad": 4,
+        "fecha": "6/30/2022"
+    },
+    {
+        "ID": 35,
+        "cliente": 13,
+        "producto": 5,
+        "cantidad": 10,
+        "fecha": "9/2/2020"
+    },
+    {
+        "ID": 36,
+        "cliente": 2,
+        "producto": 5,
+        "cantidad": 4,
+        "fecha": "5/14/2020"
+    },
+    {
+        "ID": 37,
+        "cliente": 6,
+        "producto": 6,
+        "cantidad": 8,
+        "fecha": "3/26/2018"
+    },
+    {
+        "ID": 38,
+        "cliente": 8,
+        "producto": 3,
+        "cantidad": 6,
+        "fecha": "4/22/2022"
+    },
+    {
+        "ID": 39,
+        "cliente": 2,
+        "producto": 6,
+        "cantidad": 2,
+        "fecha": "2/16/2019"
+    },
+    {
+        "ID": 40,
+        "cliente": 5,
+        "producto": 1,
+        "cantidad": 9,
+        "fecha": "12/3/2018"
+    },
+    {
+        "ID": 41,
+        "cliente": 1,
+        "producto": 5,
+        "cantidad": 9,
+        "fecha": "5/19/2022"
+    },
+    {
+        "ID": 42,
+        "cliente": 4,
+        "producto": 1,
+        "cantidad": 10,
+        "fecha": "10/22/2020"
+    },
+    {
+        "ID": 43,
+        "cliente": 2,
+        "producto": 5,
+        "cantidad": 4,
+        "fecha": "10/4/2020"
+    },
+    {
+        "ID": 44,
+        "cliente": 4,
+        "producto": 4,
+        "cantidad": 5,
+        "fecha": "7/31/2019"
+    },
+    {
+        "ID": 45,
+        "cliente": 11,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "1/3/2021"
+    },
+    {
+        "ID": 46,
+        "cliente": 2,
+        "producto": 6,
+        "cantidad": 6,
+        "fecha": "6/16/2021"
+    },
+    {
+        "ID": 47,
+        "cliente": 13,
+        "producto": 2,
+        "cantidad": 3,
+        "fecha": "10/12/2019"
+    },
+    {
+        "ID": 48,
+        "cliente": 9,
+        "producto": 5,
+        "cantidad": 3,
+        "fecha": "3/27/2019"
+    },
+    {
+        "ID": 49,
+        "cliente": 3,
+        "producto": 6,
+        "cantidad": 3,
+        "fecha": "8/6/2020"
+    },
+    {
+        "ID": 50,
+        "cliente": 4,
+        "producto": 3,
+        "cantidad": 4,
+        "fecha": "1/27/2022"
+    },
+    {
+        "ID": 51,
+        "cliente": 1,
+        "producto": 1,
+        "cantidad": 8,
+        "fecha": "10/26/2018"
+    },
+    {
+        "ID": 52,
+        "cliente": 3,
+        "producto": 4,
+        "cantidad": 2,
+        "fecha": "7/6/2022"
+    },
+    {
+        "ID": 53,
+        "cliente": 7,
+        "producto": 1,
+        "cantidad": 6,
+        "fecha": "6/22/2018"
+    },
+    {
+        "ID": 54,
+        "cliente": 7,
+        "producto": 3,
+        "cantidad": 1,
+        "fecha": "4/27/2022"
+    },
+    {
+        "ID": 55,
+        "cliente": 13,
+        "producto": 5,
+        "cantidad": 1,
+        "fecha": "1/2/2022"
+    },
+    {
+        "ID": 56,
+        "cliente": 9,
+        "producto": 3,
+        "cantidad": 2,
+        "fecha": "6/7/2019"
+    },
+    {
+        "ID": 57,
+        "cliente": 8,
+        "producto": 4,
+        "cantidad": 5,
+        "fecha": "12/9/2019"
+    },
+    {
+        "ID": 58,
+        "cliente": 7,
+        "producto": 2,
+        "cantidad": 7,
+        "fecha": "12/17/2019"
+    },
+    {
+        "ID": 59,
+        "cliente": 1,
+        "producto": 6,
+        "cantidad": 1,
+        "fecha": "10/31/2021"
+    },
+    {
+        "ID": 60,
+        "cliente": 14,
+        "producto": 5,
+        "cantidad": 8,
+        "fecha": "4/20/2018"
+    },
+    {
+        "ID": 61,
+        "cliente": 12,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "12/1/2019"
+    },
+    {
+        "ID": 62,
+        "cliente": 2,
+        "producto": 3,
+        "cantidad": 4,
+        "fecha": "4/23/2019"
+    },
+    {
+        "ID": 63,
+        "cliente": 9,
+        "producto": 3,
+        "cantidad": 5,
+        "fecha": "10/9/2022"
+    },
+    {
+        "ID": 64,
+        "cliente": 7,
+        "producto": 5,
+        "cantidad": 8,
+        "fecha": "1/6/2022"
+    },
+    {
+        "ID": 65,
+        "cliente": 4,
+        "producto": 6,
+        "cantidad": 7,
+        "fecha": "9/9/2022"
+    },
+    {
+        "ID": 66,
+        "cliente": 10,
+        "producto": 5,
+        "cantidad": 2,
+        "fecha": "7/20/2018"
+    },
+    {
+        "ID": 67,
+        "cliente": 8,
+        "producto": 2,
+        "cantidad": 10,
+        "fecha": "4/9/2018"
+    },
+    {
+        "ID": 68,
+        "cliente": 13,
+        "producto": 4,
+        "cantidad": 6,
+        "fecha": "2/20/2021"
+    },
+    {
+        "ID": 69,
+        "cliente": 3,
+        "producto": 3,
+        "cantidad": 1,
+        "fecha": "12/15/2021"
+    },
+    {
+        "ID": 70,
+        "cliente": 11,
+        "producto": 5,
+        "cantidad": 9,
+        "fecha": "10/16/2019"
+    },
+    {
+        "ID": 71,
+        "cliente": 10,
+        "producto": 6,
+        "cantidad": 4,
+        "fecha": "12/18/2019"
+    },
+    {
+        "ID": 72,
+        "cliente": 13,
+        "producto": 4,
+        "cantidad": 1,
+        "fecha": "8/3/2018"
+    },
+    {
+        "ID": 73,
+        "cliente": 10,
+        "producto": 5,
+        "cantidad": 2,
+        "fecha": "10/15/2019"
+    },
+    {
+        "ID": 74,
+        "cliente": 8,
+        "producto": 3,
+        "cantidad": 2,
+        "fecha": "6/17/2022"
+    },
+    {
+        "ID": 75,
+        "cliente": 13,
+        "producto": 2,
+        "cantidad": 5,
+        "fecha": "4/25/2018"
+    },
+    {
+        "ID": 76,
+        "cliente": 10,
+        "producto": 4,
+        "cantidad": 10,
+        "fecha": "12/27/2022"
+    },
+    {
+        "ID": 77,
+        "cliente": 8,
+        "producto": 6,
+        "cantidad": 5,
+        "fecha": "10/22/2022"
+    },
+    {
+        "ID": 78,
+        "cliente": 4,
+        "producto": 4,
+        "cantidad": 4,
+        "fecha": "4/12/2019"
+    },
+    {
+        "ID": 79,
+        "cliente": 5,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "8/24/2022"
+    },
+    {
+        "ID": 80,
+        "cliente": 6,
+        "producto": 2,
+        "cantidad": 3,
+        "fecha": "6/21/2022"
+    },
+    {
+        "ID": 81,
+        "cliente": 3,
+        "producto": 3,
+        "cantidad": 7,
+        "fecha": "4/12/2020"
+    },
+    {
+        "ID": 82,
+        "cliente": 4,
+        "producto": 4,
+        "cantidad": 9,
+        "fecha": "4/4/2019"
+    },
+    {
+        "ID": 83,
+        "cliente": 6,
+        "producto": 5,
+        "cantidad": 9,
+        "fecha": "4/15/2022"
+    },
+    {
+        "ID": 84,
+        "cliente": 9,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "9/2/2020"
+    },
+    {
+        "ID": 85,
+        "cliente": 3,
+        "producto": 1,
+        "cantidad": 4,
+        "fecha": "3/29/2018"
+    },
+    {
+        "ID": 86,
+        "cliente": 11,
+        "producto": 1,
+        "cantidad": 7,
+        "fecha": "12/15/2022"
+    },
+    {
+        "ID": 87,
+        "cliente": 8,
+        "producto": 6,
+        "cantidad": 3,
+        "fecha": "7/29/2018"
+    },
+    {
+        "ID": 88,
+        "cliente": 1,
+        "producto": 6,
+        "cantidad": 7,
+        "fecha": "1/25/2018"
+    },
+    {
+        "ID": 89,
+        "cliente": 9,
+        "producto": 6,
+        "cantidad": 5,
+        "fecha": "2/24/2019"
+    },
+    {
+        "ID": 90,
+        "cliente": 10,
+        "producto": 3,
+        "cantidad": 2,
+        "fecha": "3/23/2019"
+    },
+    {
+        "ID": 91,
+        "cliente": 8,
+        "producto": 2,
+        "cantidad": 1,
+        "fecha": "12/11/2019"
+    },
+    {
+        "ID": 92,
+        "cliente": 5,
+        "producto": 5,
+        "cantidad": 10,
+        "fecha": "3/7/2019"
+    },
+    {
+        "ID": 93,
+        "cliente": 8,
+        "producto": 3,
+        "cantidad": 5,
+        "fecha": "3/20/2022"
+    },
+    {
+        "ID": 94,
+        "cliente": 11,
+        "producto": 6,
+        "cantidad": 6,
+        "fecha": "7/5/2021"
+    },
+    {
+        "ID": 95,
+        "cliente": 11,
+        "producto": 3,
+        "cantidad": 7,
+        "fecha": "7/12/2020"
+    },
+    {
+        "ID": 96,
+        "cliente": 2,
+        "producto": 4,
+        "cantidad": 7,
+        "fecha": "1/26/2021"
+    },
+    {
+        "ID": 97,
+        "cliente": 11,
+        "producto": 4,
+        "cantidad": 9,
+        "fecha": "10/11/2020"
+    },
+    {
+        "ID": 98,
+        "cliente": 4,
+        "producto": 2,
+        "cantidad": 2,
+        "fecha": "1/11/2022"
+    },
+    {
+        "ID": 99,
+        "cliente": 4,
+        "producto": 3,
+        "cantidad": 4,
+        "fecha": "2/25/2019"
+    },
+    {
+        "ID": 100,
+        "cliente": 4,
+        "producto": 2,
+        "cantidad": 6,
+        "fecha": "5/30/2018"
+    },
+    {
+        "ID": 101,
+        "cliente": 9,
+        "producto": 1,
+        "cantidad": 9,
+        "fecha": "1/27/2021"
+    },
+    {
+        "ID": 102,
+        "cliente": 1,
+        "producto": 1,
+        "cantidad": 4,
+        "fecha": "9/8/2021"
+    },
+    {
+        "ID": 103,
+        "cliente": 8,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "7/30/2019"
+    },
+    {
+        "ID": 104,
+        "cliente": 3,
+        "producto": 3,
+        "cantidad": 4,
+        "fecha": "12/3/2019"
+    },
+    {
+        "ID": 105,
+        "cliente": 14,
+        "producto": 2,
+        "cantidad": 5,
+        "fecha": "4/18/2020"
+    },
+    {
+        "ID": 106,
+        "cliente": 8,
+        "producto": 1,
+        "cantidad": 4,
+        "fecha": "2/3/2019"
+    },
+    {
+        "ID": 107,
+        "cliente": 3,
+        "producto": 1,
+        "cantidad": 1,
+        "fecha": "12/24/2022"
+    },
+    {
+        "ID": 108,
+        "cliente": 13,
+        "producto": 2,
+        "cantidad": 3,
+        "fecha": "8/5/2019"
+    },
+    {
+        "ID": 109,
+        "cliente": 5,
+        "producto": 2,
+        "cantidad": 2,
+        "fecha": "11/23/2019"
+    },
+    {
+        "ID": 110,
+        "cliente": 13,
+        "producto": 5,
+        "cantidad": 3,
+        "fecha": "11/5/2022"
+    },
+    {
+        "ID": 111,
+        "cliente": 12,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "10/7/2020"
+    },
+    {
+        "ID": 112,
+        "cliente": 1,
+        "producto": 2,
+        "cantidad": 1,
+        "fecha": "4/10/2021"
+    },
+    {
+        "ID": 113,
+        "cliente": 3,
+        "producto": 2,
+        "cantidad": 1,
+        "fecha": "4/28/2019"
+    },
+    {
+        "ID": 114,
+        "cliente": 12,
+        "producto": 5,
+        "cantidad": 6,
+        "fecha": "12/22/2021"
+    },
+    {
+        "ID": 115,
+        "cliente": 5,
+        "producto": 6,
+        "cantidad": 5,
+        "fecha": "4/23/2019"
+    },
+    {
+        "ID": 116,
+        "cliente": 8,
+        "producto": 2,
+        "cantidad": 2,
+        "fecha": "8/25/2020"
+    },
+    {
+        "ID": 117,
+        "cliente": 3,
+        "producto": 5,
+        "cantidad": 4,
+        "fecha": "6/20/2019"
+    },
+    {
+        "ID": 118,
+        "cliente": 1,
+        "producto": 6,
+        "cantidad": 4,
+        "fecha": "11/29/2018"
+    },
+    {
+        "ID": 119,
+        "cliente": 4,
+        "producto": 5,
+        "cantidad": 10,
+        "fecha": "1/15/2020"
+    },
+    {
+        "ID": 120,
+        "cliente": 13,
+        "producto": 2,
+        "cantidad": 4,
+        "fecha": "10/6/2018"
+    },
+    {
+        "ID": 121,
+        "cliente": 10,
+        "producto": 1,
+        "cantidad": 10,
+        "fecha": "5/17/2022"
+    },
+    {
+        "ID": 122,
+        "cliente": 3,
+        "producto": 3,
+        "cantidad": 2,
+        "fecha": "9/19/2019"
+    },
+    {
+        "ID": 123,
+        "cliente": 14,
+        "producto": 3,
+        "cantidad": 5,
+        "fecha": "3/22/2021"
+    },
+    {
+        "ID": 124,
+        "cliente": 8,
+        "producto": 3,
+        "cantidad": 1,
+        "fecha": "5/15/2022"
+    },
+    {
+        "ID": 125,
+        "cliente": 6,
+        "producto": 6,
+        "cantidad": 3,
+        "fecha": "4/8/2021"
+    },
+    {
+        "ID": 126,
+        "cliente": 14,
+        "producto": 5,
+        "cantidad": 10,
+        "fecha": "10/31/2022"
+    },
+    {
+        "ID": 127,
+        "cliente": 4,
+        "producto": 2,
+        "cantidad": 5,
+        "fecha": "5/2/2019"
+    },
+    {
+        "ID": 128,
+        "cliente": 4,
+        "producto": 5,
+        "cantidad": 8,
+        "fecha": "10/25/2019"
+    },
+    {
+        "ID": 129,
+        "cliente": 8,
+        "producto": 3,
+        "cantidad": 1,
+        "fecha": "11/24/2020"
+    },
+    {
+        "ID": 130,
+        "cliente": 5,
+        "producto": 3,
+        "cantidad": 9,
+        "fecha": "10/9/2018"
+    },
+    {
+        "ID": 131,
+        "cliente": 7,
+        "producto": 6,
+        "cantidad": 7,
+        "fecha": "1/29/2018"
+    },
+    {
+        "ID": 132,
+        "cliente": 13,
+        "producto": 5,
+        "cantidad": 3,
+        "fecha": "6/9/2021"
+    },
+    {
+        "ID": 133,
+        "cliente": 13,
+        "producto": 4,
+        "cantidad": 10,
+        "fecha": "5/10/2018"
+    },
+    {
+        "ID": 134,
+        "cliente": 6,
+        "producto": 2,
+        "cantidad": 3,
+        "fecha": "3/4/2021"
+    },
+    {
+        "ID": 135,
+        "cliente": 12,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "4/28/2022"
+    },
+    {
+        "ID": 136,
+        "cliente": 14,
+        "producto": 1,
+        "cantidad": 10,
+        "fecha": "9/2/2022"
+    },
+    {
+        "ID": 137,
+        "cliente": 13,
+        "producto": 3,
+        "cantidad": 5,
+        "fecha": "10/31/2022"
+    },
+    {
+        "ID": 138,
+        "cliente": 12,
+        "producto": 2,
+        "cantidad": 4,
+        "fecha": "6/17/2018"
+    },
+    {
+        "ID": 139,
+        "cliente": 11,
+        "producto": 4,
+        "cantidad": 7,
+        "fecha": "5/10/2018"
+    },
+    {
+        "ID": 140,
+        "cliente": 7,
+        "producto": 4,
+        "cantidad": 4,
+        "fecha": "9/24/2021"
+    },
+    {
+        "ID": 141,
+        "cliente": 9,
+        "producto": 5,
+        "cantidad": 9,
+        "fecha": "6/16/2018"
+    },
+    {
+        "ID": 142,
+        "cliente": 7,
+        "producto": 2,
+        "cantidad": 5,
+        "fecha": "12/20/2019"
+    },
+    {
+        "ID": 143,
+        "cliente": 14,
+        "producto": 3,
+        "cantidad": 6,
+        "fecha": "5/14/2022"
+    },
+    {
+        "ID": 144,
+        "cliente": 2,
+        "producto": 6,
+        "cantidad": 4,
+        "fecha": "10/23/2018"
+    },
+    {
+        "ID": 145,
+        "cliente": 12,
+        "producto": 5,
+        "cantidad": 4,
+        "fecha": "2/1/2018"
+    },
+    {
+        "ID": 146,
+        "cliente": 2,
+        "producto": 3,
+        "cantidad": 7,
+        "fecha": "12/3/2018"
+    },
+    {
+        "ID": 147,
+        "cliente": 7,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "5/20/2019"
+    },
+    {
+        "ID": 148,
+        "cliente": 9,
+        "producto": 5,
+        "cantidad": 2,
+        "fecha": "10/27/2022"
+    },
+    {
+        "ID": 149,
+        "cliente": 12,
+        "producto": 3,
+        "cantidad": 7,
+        "fecha": "3/9/2021"
+    },
+    {
+        "ID": 150,
+        "cliente": 1,
+        "producto": 1,
+        "cantidad": 2,
+        "fecha": "12/24/2018"
+    },
+    {
+        "ID": 151,
+        "cliente": 7,
+        "producto": 4,
+        "cantidad": 6,
+        "fecha": "7/8/2019"
+    },
+    {
+        "ID": 152,
+        "cliente": 6,
+        "producto": 4,
+        "cantidad": 4,
+        "fecha": "9/24/2021"
+    },
+    {
+        "ID": 153,
+        "cliente": 9,
+        "producto": 1,
+        "cantidad": 10,
+        "fecha": "4/13/2020"
+    },
+    {
+        "ID": 154,
+        "cliente": 7,
+        "producto": 2,
+        "cantidad": 9,
+        "fecha": "2/18/2018"
+    },
+    {
+        "ID": 155,
+        "cliente": 9,
+        "producto": 1,
+        "cantidad": 9,
+        "fecha": "2/25/2022"
+    },
+    {
+        "ID": 156,
+        "cliente": 12,
+        "producto": 4,
+        "cantidad": 10,
+        "fecha": "8/11/2020"
+    },
+    {
+        "ID": 157,
+        "cliente": 9,
+        "producto": 3,
+        "cantidad": 1,
+        "fecha": "3/11/2018"
+    },
+    {
+        "ID": 158,
+        "cliente": 5,
+        "producto": 4,
+        "cantidad": 1,
+        "fecha": "9/25/2018"
+    },
+    {
+        "ID": 159,
+        "cliente": 11,
+        "producto": 5,
+        "cantidad": 2,
+        "fecha": "12/23/2018"
+    },
+    {
+        "ID": 160,
+        "cliente": 9,
+        "producto": 1,
+        "cantidad": 1,
+        "fecha": "12/27/2021"
+    },
+    {
+        "ID": 161,
+        "cliente": 2,
+        "producto": 5,
+        "cantidad": 2,
+        "fecha": "1/26/2019"
+    },
+    {
+        "ID": 162,
+        "cliente": 3,
+        "producto": 2,
+        "cantidad": 8,
+        "fecha": "11/28/2022"
+    },
+    {
+        "ID": 163,
+        "cliente": 4,
+        "producto": 4,
+        "cantidad": 9,
+        "fecha": "5/14/2018"
+    },
+    {
+        "ID": 164,
+        "cliente": 3,
+        "producto": 4,
+        "cantidad": 7,
+        "fecha": "6/23/2018"
+    },
+    {
+        "ID": 165,
+        "cliente": 5,
+        "producto": 3,
+        "cantidad": 4,
+        "fecha": "4/30/2019"
+    },
+    {
+        "ID": 166,
+        "cliente": 1,
+        "producto": 6,
+        "cantidad": 1,
+        "fecha": "2/17/2022"
+    },
+    {
+        "ID": 167,
+        "cliente": 7,
+        "producto": 1,
+        "cantidad": 8,
+        "fecha": "7/8/2018"
+    },
+    {
+        "ID": 168,
+        "cliente": 13,
+        "producto": 1,
+        "cantidad": 6,
+        "fecha": "4/22/2021"
+    },
+    {
+        "ID": 169,
+        "cliente": 5,
+        "producto": 6,
+        "cantidad": 3,
+        "fecha": "11/25/2022"
+    },
+    {
+        "ID": 170,
+        "cliente": 14,
+        "producto": 6,
+        "cantidad": 1,
+        "fecha": "5/18/2020"
+    },
+    {
+        "ID": 171,
+        "cliente": 12,
+        "producto": 6,
+        "cantidad": 5,
+        "fecha": "11/12/2022"
+    },
+    {
+        "ID": 172,
+        "cliente": 1,
+        "producto": 3,
+        "cantidad": 6,
+        "fecha": "4/15/2019"
+    },
+    {
+        "ID": 173,
+        "cliente": 1,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "2/11/2019"
+    },
+    {
+        "ID": 174,
+        "cliente": 2,
+        "producto": 4,
+        "cantidad": 3,
+        "fecha": "6/10/2020"
+    },
+    {
+        "ID": 175,
+        "cliente": 6,
+        "producto": 5,
+        "cantidad": 2,
+        "fecha": "7/20/2022"
+    },
+    {
+        "ID": 176,
+        "cliente": 13,
+        "producto": 1,
+        "cantidad": 10,
+        "fecha": "7/1/2020"
+    },
+    {
+        "ID": 177,
+        "cliente": 7,
+        "producto": 2,
+        "cantidad": 5,
+        "fecha": "8/17/2019"
+    },
+    {
+        "ID": 178,
+        "cliente": 6,
+        "producto": 3,
+        "cantidad": 2,
+        "fecha": "9/28/2019"
+    },
+    {
+        "ID": 179,
+        "cliente": 7,
+        "producto": 3,
+        "cantidad": 8,
+        "fecha": "4/12/2019"
+    },
+    {
+        "ID": 180,
+        "cliente": 11,
+        "producto": 1,
+        "cantidad": 6,
+        "fecha": "10/5/2019"
+    },
+    {
+        "ID": 181,
+        "cliente": 6,
+        "producto": 6,
+        "cantidad": 6,
+        "fecha": "7/19/2020"
+    },
+    {
+        "ID": 182,
+        "cliente": 8,
+        "producto": 5,
+        "cantidad": 8,
+        "fecha": "12/8/2020"
+    },
+    {
+        "ID": 183,
+        "cliente": 12,
+        "producto": 3,
+        "cantidad": 10,
+        "fecha": "5/29/2020"
+    },
+    {
+        "ID": 184,
+        "cliente": 3,
+        "producto": 4,
+        "cantidad": 4,
+        "fecha": "6/15/2022"
+    },
+    {
+        "ID": 185,
+        "cliente": 7,
+        "producto": 6,
+        "cantidad": 3,
+        "fecha": "2/17/2022"
+    },
+    {
+        "ID": 186,
+        "cliente": 13,
+        "producto": 1,
+        "cantidad": 3,
+        "fecha": "1/31/2020"
+    },
+    {
+        "ID": 187,
+        "cliente": 13,
+        "producto": 1,
+        "cantidad": 1,
+        "fecha": "7/12/2018"
+    },
+    {
+        "ID": 188,
+        "cliente": 12,
+        "producto": 3,
+        "cantidad": 7,
+        "fecha": "8/27/2019"
+    },
+    {
+        "ID": 189,
+        "cliente": 10,
+        "producto": 3,
+        "cantidad": 7,
+        "fecha": "7/19/2022"
+    },
+    {
+        "ID": 190,
+        "cliente": 4,
+        "producto": 4,
+        "cantidad": 8,
+        "fecha": "12/2/2018"
+    },
+    {
+        "ID": 191,
+        "cliente": 6,
+        "producto": 3,
+        "cantidad": 7,
+        "fecha": "4/10/2020"
+    },
+    {
+        "ID": 192,
+        "cliente": 2,
+        "producto": 6,
+        "cantidad": 9,
+        "fecha": "5/25/2021"
+    },
+    {
+        "ID": 193,
+        "cliente": 9,
+        "producto": 2,
+        "cantidad": 10,
+        "fecha": "7/7/2020"
+    },
+    {
+        "ID": 194,
+        "cliente": 5,
+        "producto": 6,
+        "cantidad": 4,
+        "fecha": "10/22/2022"
+    },
+    {
+        "ID": 195,
+        "cliente": 12,
+        "producto": 3,
+        "cantidad": 1,
+        "fecha": "2/29/2020"
+    },
+    {
+        "ID": 196,
+        "cliente": 7,
+        "producto": 4,
+        "cantidad": 8,
+        "fecha": "7/10/2018"
+    },
+    {
+        "ID": 197,
+        "cliente": 11,
+        "producto": 1,
+        "cantidad": 7,
+        "fecha": "12/8/2022"
+    },
+    {
+        "ID": 198,
+        "cliente": 1,
+        "producto": 4,
+        "cantidad": 5,
+        "fecha": "10/4/2022"
+    },
+    {
+        "ID": 199,
+        "cliente": 4,
+        "producto": 3,
+        "cantidad": 3,
+        "fecha": "2/6/2022"
+    },
+    {
+        "ID": 200,
+        "cliente": 1,
+        "producto": 2,
+        "cantidad": 2,
+        "fecha": "4/28/2018"
+    }
+]

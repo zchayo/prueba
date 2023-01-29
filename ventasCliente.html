@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePen - Simple Array - DevExtreme Data Grid</title>
+    <link rel='stylesheet' href='https://cdn3.devexpress.com/jslib/22.2.3/css/dx.light.css'>
+    <title>Ventas</title>
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+    <div class="dx-viewport demo-container">
+        <div id="gridContainer"></div>
+    </div>
+    <!-- partial -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src='https://cdn3.devexpress.com/jslib/22.2.3/js/dx.all.js'></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const idParametro = urlParams.get('id');
+        console.log(idParametro);
+
+        Promise.all([fetch('db/clientes.json'), fetch('db/ventas.json'), fetch('db/productos.json')])
+            .then(respuestas => Promise.all(respuestas.map(res => res.json())))
+            .then(datos => {
+                const clientes = datos[0];
+                const ventas = datos[1];
+                const productos = datos[2];
+
+                const ventasFiltradas = ventas.filter(venta => venta.cliente == idParametro)
+
+                const ventasFinal = ventasFiltradas.map(v => {
+                    let producto = productos.find(p => v.producto == p.ID)
+                    v.producto = producto.producto
+                    v.precio = producto.precio
+                    v.precioTotal = v.cantidad * v.precio
+                    return v
+                })
+
+                const cuentaTotal = ventasFinal.reduce((acumulador, valor) => {
+                    return acumulador + valor.precioFinal
+                }, 0)
+
+                const cliente = clientes.find(c => c.ID == idParametro);
+
+                console.log(ventasFinal[0])
+
+                $(() => {
+                    $('#gridContainer').dxDataGrid({
+                        dataSource: ventasFinal,
+                        keyExpr: 'ID',
+                        columns: [
+                            {
+                                dataField: 'ID',
+                                caption: 'Número de venta',
+                                alignment: 'center',
+                            },
+                            {
+                                dataField: 'fecha',
+                                alignment: 'center',
+                                caption: 'Fecha',
+                                dataType: 'date',
+                                format: "dd-MM-yyyy",
+                            },
+                            {
+                                dataField: 'producto',
+                                alignment: 'center',
+                                groupIndex: 0,
+                            }
+
+                            ,
+
+                            {
+                                dataField: 'cantidad',
+                                alignment: 'center'
+                            },
+                            {
+                                caption: 'Precio unitario',
+                                dataField: 'precio',
+                                alignment: 'center',
+                                format: 'currency',
+                            },
+                            {
+
+                                dataField: 'precioTotal',
+                                alignment: 'center',
+                                format: 'currency',
+                            },
+
+                        ],
+                        filterRow: {
+                            visible: true,
+                            applyFilter: 'auto',
+                        },
+                        searchPanel: {
+                            visible: true,
+                            width: 240,
+                            placeholder: 'Search...',
+                        },
+                        headerFilter: {
+                            visible: true,
+                        },
+                        allowColumnReordering: true,
+                        groupPanel: {
+                            visible: true,
+                        },
+                        columnAutoWidth: true,
+                        allowColumnResizing: true,
+                        showBorders: true,
+                        paging: {
+                            pageSize: 5,
+                        },
+                        pager: {
+                            visible: true,
+                            allowedPageSizes: [5, 10, 'all'],
+                            showPageSizeSelector: true,
+                            showInfo: true,
+                            showNavigationButtons: true,
+                        },
+
+
+
+                    });
+                });
+
+
+
+
+
+
+            })
+
+
+    </script>
+</body>
+
+</html>
