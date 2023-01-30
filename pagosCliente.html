@@ -12,11 +12,14 @@
 
 <style>
     .demo-container {
-        display: flex; /* para acomodar ambos elementos en una linea */
+        display: flex;
+        /* para acomodar ambos elementos en una linea */
     }
 
-    #bars, #pie {
-        width: 50%; /* para que ocupen el 50% del ancho del contenedor */
+    #bars,
+    #pie {
+        width: 50%;
+        /* para que ocupen el 50% del ancho del contenedor */
     }
 </style>
 
@@ -45,7 +48,7 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const idParametro = urlParams.get('id');
-        console.log(idParametro);
+        
 
         Promise.all([fetch('db/clientes.json'), fetch('db/pagos.json')])
             .then(respuestas => Promise.all(respuestas.map(res => res.json())))
@@ -54,8 +57,8 @@
                 const pagos = datos[1];
 
                 const pagosFiltrados = pagos.filter(pago => pago.cliente == idParametro)
-                console.log(pagosFiltrados[0])
-
+                const cliente = clientes.find(c => c.ID == idParametro)
+                console.log(cliente)
 
                 //grid
                 $(() => {
@@ -108,11 +111,11 @@
                         allowColumnResizing: true,
                         showBorders: true,
                         paging: {
-                            pageSize: 5,
+                            pageSize: 10,
                         },
                         pager: {
                             visible: true,
-                            allowedPageSizes: [5, 10, 'all'],
+                            allowedPageSizes: [10, 'all'],
                             showPageSizeSelector: true,
                             showInfo: true,
                             showNavigationButtons: true,
@@ -132,41 +135,42 @@
                 pagosXanio.sort(function (a, b) {
                     return a.anio - b.anio;
                 });
-                console.log('hola')
+            
+                console.log(pagosXanio)
 
-                $("#bars").dxChart({
-                    dataSource: pagosXanio,
-                    palette: 'soft',
-                    title: 'Pagos de cliente por año',
-
-                    commonSeriesSettings: {
-                        argumentField: "anio",
-                        valueField: "cantidad",
-                        name: "Cantidad",
-                        type: "bar",
-                        ignoreEmptyPoints: true,
-                    },
-                    argumentAxis: {
-                        label: {
-                            format: "year"
-                        }
-                    },
-
-                    seriesTemplate: {
-                        nameField: 'anio',
-                    },
-                    tooltip: {
-                        enabled: true,
-                        location: 'edge',
-                        customizeTooltip(arg) {
-                            return {
-                                text: `Pagos totales ${arg.value.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })}`,
-                            };
-                        },
-                    },
-
-
-                });
+                 $("#bars").dxChart({
+                     dataSource: pagosXanio,
+                     palette: 'soft',
+                     title: `Pagos de ${cliente.FirstName} ${cliente.LastName} `,
+ 
+                     commonSeriesSettings: {
+                         argumentField: "anio",
+                         valueField: "cantidad",
+                         name: "Cantidad",
+                         type: "bar",
+                         ignoreEmptyPoints: true,
+                     },
+                     argumentAxis: {
+                         label: {
+                             format: "year"
+                         }
+                     },
+ 
+                     seriesTemplate: {
+                         nameField: 'anio',
+                     },
+                     tooltip: {
+                         enabled: true,
+                         location: 'edge',
+                         customizeTooltip(arg) {
+                             return {
+                                 text: `Pagos totales ${arg.total.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })}`,
+                             };
+                         },
+                     },
+                 });
+                 
+            
 
 
 
@@ -188,7 +192,7 @@
                         cantidad: formasDePago[formaPago]
                     })),
                     palette: 'soft',
-                    title : 'Formas de pago',
+                    title: 'Formas de pago',
                     series: [{
                         argumentField: "formaPago",
                         valueField: "cantidad",

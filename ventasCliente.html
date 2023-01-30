@@ -7,15 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodePen - Simple Array - DevExtreme Data Grid</title>
     <link rel='stylesheet' href='https://cdn3.devexpress.com/jslib/22.2.3/css/dx.light.css'>
+
+    <style>
+        .demo-container {
+            margin: 30px 0;
+        }
+
+        .tooltip-header {
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #c5c5c5;
+        }
+
+        .tooltip-body {
+            width: 200px;
+        }
+
+        .tooltip-body .series-name {
+            font-weight: normal;
+            opacity: 0.6;
+            display: inline-block;
+            line-height: 1.5;
+            padding-right: 10px;
+            width: 126px;
+        }
+
+        .tooltip-body .value-text {
+            display: inline-block;
+            line-height: 1.5;
+            width: 30px;
+        }
+    </style>
+
     <title>Ventas</title>
 </head>
 
 <body>
 
+    <div class="dx-viewport demo-container">
+        <div id="chart"></div>
+    </div>
     <!-- partial:index.partial.html -->
     <div class="dx-viewport demo-container">
         <div id="gridContainer"></div>
     </div>
+
+
     <!-- partial -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src='https://cdn3.devexpress.com/jslib/22.2.3/js/dx.all.js'></script>
@@ -47,6 +86,7 @@
                 }, 0)
 
                 const cliente = clientes.find(c => c.ID == idParametro);
+                console.log(cliente)
 
                 console.log(ventasFinal[0])
 
@@ -71,10 +111,7 @@
                                 dataField: 'producto',
                                 alignment: 'center',
                                 groupIndex: 0,
-                            }
-
-                            ,
-
+                            },
                             {
                                 dataField: 'cantidad',
                                 alignment: 'center'
@@ -93,6 +130,17 @@
                             },
 
                         ],
+                        summary: {
+                            groupItems: [{
+                                column: 'precioTotal',
+                                summaryType: 'sum',
+                                valueFormat: 'currency',
+                                displayFormat: 'Total: {0}',
+                                showInGroupFooter: false,
+                                alignByColumn: true,
+                            }]
+                        },
+
                         filterRow: {
                             visible: true,
                             applyFilter: 'auto',
@@ -113,11 +161,11 @@
                         allowColumnResizing: true,
                         showBorders: true,
                         paging: {
-                            pageSize: 5,
+                            pageSize: 10,
                         },
                         pager: {
                             visible: true,
-                            allowedPageSizes: [5, 10, 'all'],
+                            allowedPageSizes: [10, 'all'],
                             showPageSizeSelector: true,
                             showInfo: true,
                             showNavigationButtons: true,
@@ -128,12 +176,117 @@
                     });
                 });
 
+                //chart
+                arrayProductos = []
+                console.log(ventasFinal[0])
+                ventasFinal.forEach(venta => {
+                    producto = arrayProductos.find(p => p.producto == venta.producto)
+                    if (!producto) {
+                        arrayProductos.push({
+                            producto: venta.producto,
+                            cantidad: venta.cantidad,
+                            precioTotal: venta.precioTotal,
+                        })
+                    } else {
+                        index = arrayProductos.findIndex(p => p.producto == venta.producto)
+                        arrayProductos[index].cantidad += venta.cantidad
+                        arrayProductos[index].precioTotal += venta.precioTotal
+                    }
+
+                });
+
+                console.log(arrayProductos)
+
+
+
+                $('#chart').dxChart({
+                    palette: 'Harmony Light',
+                    dataSource: arrayProductos,
+                    title: `Ventas ${cliente.FirstName} ${cliente.LastName}`,
+                    argumentAxis: {
+                        label: {
+                            overlappingBehavior: 'stagger',
+                        },
+                    },
+
+                    valueAxis: [{
+                        name: 'ventaTotal',
+                        position: 'left',
+                        tickInterval: 300,
+                    }, {
+                        name: 'cantidad',
+                        position: 'right',
+                        showZero: true,
+                        tickInterval: 5,
+                        valueMarginsEnabled: false,
+                    }],
+                    commonSeriesSettings: {
+                        argumentField: 'producto',
+                    },
+                    series: [{
+                        type: 'bar',
+                        valueField: 'precioTotal',
+                        axis: 'ventaTotal',
+                        name: 'Venta total',
+                        color: '#fac29a',
+                    }, {
+                        type: 'spline',
+                        valueField: 'cantidad',
+                        axis: 'cantidad',
+                        name: 'Cantidad de productos',
+                        color: '#6b71c3',
+                    }],
+                    legend: {
+                        verticalAlignment: 'top',
+                        horizontalAlignment: 'center',
+                    },
+                    tooltip: {
+                        enabled: true,
+                        shared: true,
+                        customizeTooltip(info) {
+                            const content = ["<div><div class='tooltip-header'></div>",
+                                "<div class='tooltip-body'><div class='series-name'>",
+                                "<span class='top-series-name'></span>",
+                                ": </div><div class='value-text'>",
+                                "<span class='top-series-value'></span>",
+                                "</div><div class='series-name'>",
+                                "<span class='bottom-series-name'></span>",
+                                ": </div><div class='value-text'>",
+                                "<span class='bottom-series-value'></span>",
+                                ' </div></div></div>'].join('');
+
+                            const htmlContent = $(content);
+
+                            htmlContent.find('.tooltip-header').text(info.argumentText);
+                            htmlContent.find('.top-series-name').text(info.points[0].seriesName);
+                            htmlContent.find('.top-series-value').text(
+                                Number(info.points[0].valueText).toLocaleString('en-US', {
+                                    style: 'currency',
+                                    currency: 'USD',
+                                })
+                            );
+                            htmlContent.find('.bottom-series-name').text(info.points[1].seriesName);
+                            htmlContent.find('.bottom-series-value').text(info.points[1].valueText);
+
+                            return {
+                                html: $('<div>').append(htmlContent).html(),
+                            };
+                        },
+                    },
+
+                });
+            });
 
 
 
 
 
-            })
+
+
+
+
+
+
 
 
     </script>
