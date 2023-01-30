@@ -57,17 +57,20 @@ Promise.all([fetch('db/clientes.json'), fetch('db/ventas.json'), fetch('db/produ
                         dataField: 'precioTotal',
                         alignment: 'center',
                         format: 'currency',
+                        caption: 'Ventas',
 
                     },
                     {
                         dataField: 'pagosTotal',
                         alignment: 'center',
                         format: 'currency',
+                        caption: 'Pagos',
 
                     }, {
                         dataField: 'total',
                         alignment: 'center',
                         format: 'currency',
+                        caption: 'Deuda',
 
                     },
                     {
