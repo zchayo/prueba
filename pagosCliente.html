@@ -8,6 +8,9 @@
 
     <link rel='stylesheet' href='https://cdn3.devexpress.com/jslib/22.2.3/css/dx.light.css'>
     <title>Pagos CodePen</title>
+
+    <link rel="stylesheet" type="text/css" href="modal.css" media="screen" />
+
 </head>
 
 <style>
@@ -23,8 +26,10 @@
     }
 </style>
 
-<body>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
+<body>
 
 
     <div class="demo-container">
@@ -37,18 +42,29 @@
         <div id="gridContainer"></div>
     </div>
 
+    <!-- Modal content -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="closeModal" style="cursor: pointer;">
+                <i class="fas fa-times"></i>
+            </span>
+            <iframe id="modalIframe" src=""></iframe>
+        </div>
+    </div>
 
 
 
-
+   
     <!-- partial -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src='https://cdn3.devexpress.com/jslib/22.2.3/js/dx.all.js'></script>
 
+    <script src="formulas.js"></script>
+
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const idParametro = urlParams.get('id');
-        
+
 
         Promise.all([fetch('db/clientes.json'), fetch('db/pagos.json')])
             .then(respuestas => Promise.all(respuestas.map(res => res.json())))
@@ -58,7 +74,7 @@
 
                 const pagosFiltrados = pagos.filter(pago => pago.cliente == idParametro)
                 const cliente = clientes.find(c => c.ID == idParametro)
-                console.log(cliente)
+
 
                 //grid
                 $(() => {
@@ -78,11 +94,14 @@
                                 dataType: 'date',
                                 format: "dd-MM-yyyy",
                             },
-
                             {
                                 dataField: 'cantidad',
                                 alignment: 'center',
-                                format: 'currency',
+                                cellTemplate: function (container, options) {
+                                    var url = 'https://zchayo.github.io/pagosCliente.html?id=2&precioTotal=338500&pagosTotal=335200'
+                                    formatoLink(container, options, url, true);
+                                },
+
                             },
                             {
                                 dataField: 'formaPago',
@@ -135,46 +154,40 @@
                 pagosXanio.sort(function (a, b) {
                     return a.anio - b.anio;
                 });
-            
+
                 console.log(pagosXanio)
 
-                 $("#bars").dxChart({
-                     dataSource: pagosXanio,
-                     palette: 'soft',
-                     title: `Pagos de ${cliente.FirstName} ${cliente.LastName} `,
- 
-                     commonSeriesSettings: {
-                         argumentField: "anio",
-                         valueField: "cantidad",
-                         name: "Cantidad",
-                         type: "bar",
-                         ignoreEmptyPoints: true,
-                     },
-                     argumentAxis: {
-                         label: {
-                             format: "year"
-                         }
-                     },
- 
-                     seriesTemplate: {
-                         nameField: 'anio',
-                     },
-                     tooltip: {
-                         enabled: true,
-                         location: 'edge',
-                         customizeTooltip(arg) {
-                             return {
-                                 text: `Pagos totales ${arg.total.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })}`,
-                             };
-                         },
-                     },
-                 });
-                 
-            
+                $("#bars").dxChart({
+                    dataSource: pagosXanio,
+                    palette: 'soft',
+                    title: `Pagos de ${cliente.FirstName} ${cliente.LastName} `,
 
+                    commonSeriesSettings: {
+                        argumentField: "anio",
+                        valueField: "cantidad",
+                        name: "Cantidad",
+                        type: "stackedBar",
+                        ignoreEmptyPoints: true,
+                    },
+                    argumentAxis: {
+                        label: {
+                            format: "year"
+                        }
+                    },
 
-
-
+                    seriesTemplate: {
+                        nameField: 'anio',
+                    },
+                    tooltip: {
+                        enabled: true,
+                        location: 'edge',
+                        customizeTooltip(arg) {
+                            return {
+                                text: `Pagos totales ${arg.total.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })}`,
+                            };
+                        },
+                    },
+                });
 
 
                 //pie chart
@@ -209,22 +222,7 @@
                     }]
                 });
 
-
-
-
-
-
-
-
-
-
             })
-
-
-
-
-
-
 
         /*                 */
 
