@@ -1,11 +1,9 @@
 function formatoLink(container, options, url, esMoneda) {
 
-    var span = document.getElementsByClassName("closeModal")[0];
-    var modal = document.getElementById("myModal");
-    var iframe = document.getElementById("modalIframe");
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const esPopup = urlParams.get('esPopup');
+
+    tamanoPopup = esPopup ? '100%' : '95%'
 
     var linkClicked = false;
     var valor = options.value;
@@ -26,11 +24,33 @@ function formatoLink(container, options, url, esMoneda) {
             }
         })
         .on("click", function () {
-            linkClicked = true;
-            $(this).css("color", "purple");
-            iframe.src = url;
-            modal.style.display = "block";
 
+            linkClicked = true;
+            $(this).css("color", "blue");
+
+            const popupContentTemplate = function () {
+                return $('<div style="height: 100%;">').append(
+                    $('<iframe>', {
+                        id: 'modalIframe',
+                        src: url,
+                        frameborder: 0,
+                        width: '100%',
+                        height: '100%'
+                    })
+                );
+            };
+
+            const popup = $('#popup').dxPopup({
+                contentTemplate: popupContentTemplate,
+                width: tamanoPopup,
+                height: tamanoPopup,
+                showTitle: true,
+                showCloseButton: true,
+                hideOnOutsideClick: true,
+                visible: false
+            }).dxPopup('instance');
+
+            popup.show()
         })
         // .attr("href", url)
         // .attr("target", "_blank")
@@ -69,7 +89,7 @@ var opcionesGenerales = {
     },
 };
 
-function crearDataGrid (gridConteiner, opcionesEspecificas) {
+function crearDataGrid(gridConteiner, opcionesEspecificas) {
     var opcionesFinales = $.extend({}, opcionesGenerales, opcionesEspecificas);
     $(gridConteiner).dxDataGrid(opcionesFinales);
 }

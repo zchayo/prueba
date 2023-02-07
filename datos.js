@@ -70,7 +70,7 @@ Promise.all([fetch('db/clientes.json'), fetch('db/ventas.json'), fetch('db/produ
                         alignment: 'center',
                         caption: 'Pagos',
                         cellTemplate: function (container, options) {
-                            var url = `pagosCliente.html?id=${options.data.ID}&precioTotal=${options.data.precioTotal}&pagosTotal=${options.data.pagosTotal} `
+                            var url = `pagosCliente.html?id=${options.data.ID}&precioTotal=${options.data.precioTotal}&pagosTotal=${options.data.pagosTotal}&esPopup=true`
                             formatoLink(container, options, url, true);
                         },
                     },
@@ -84,8 +84,111 @@ Promise.all([fetch('db/clientes.json'), fetch('db/ventas.json'), fetch('db/produ
             
 
 
-                });
+            // $('#gridContainer').dxDataGrid({
+            //     dataSource: clientes,
+            //     keyExpr: 'ID',
+            //     columns: [
+            //         {
+            //             dataField: 'FirstName',
+            //             caption: 'Nombre',
+            //             alignment: 'center',
+            //         },
+            //         {
+            //             dataField: 'LastName',
+            //             caption: 'Apellido',
+            //             alignment: 'center',
+            //         },
+            //         {
+            //             dataField: 'numeroCompras',
+            //             caption: 'Cantidad de compras',
+            //             alignment: 'center',
+            //         },
+            //         {
+            //             dataField: 'precioTotal',
+            //             alignment: 'center',
+            //             caption: 'Ventas',
+            //             cellTemplate: function (container, options) {
+            //                 var url = `ventasCliente.html?id=${options.data.ID}`
+            //                 formatoLink(container, options, url, true);
+            //             },
+            //         },
+            //         {
+            //             dataField: 'pagosTotal',
+            //             alignment: 'center',
+            //             caption: 'Pagos',
+            //             cellTemplate: function (container, options) {
+            //                 var url = `pagosCliente.html?id=${options.data.ID}&precioTotal=${options.data.precioTotal}&pagosTotal=${options.data.pagosTotal} `
+            //                 formatoLink(container, options, url, true);
+            //             },
+
+            //         }, {
+            //             dataField: 'total',
+            //             alignment: 'center',
+            //             format: 'currency',
+
+            //         },
+            //     ],
+            //     filterRow: {
+            //         visible: true,
+            //         applyFilter: 'auto',
+            //     },
+            //     searchPanel: {
+            //         visible: true,
+            //         width: 240,
+            //         placeholder: 'Search...',
+            //     },
+            //     headerFilter: {
+            //         visible: true,
+            //     },
+            //     allowColumnReordering: true,
+            //     groupPanel: {
+            //         visible: true,
+            //     },
+            //     columnAutoWidth: true,
+            //     allowColumnResizing: true,
+            //     showBorders: true,
+            //     paging: {
+            //         pageSize: 5,
+            //     },
+            //     pager: {
+            //         visible: true,
+            //         allowedPageSizes: [5, 10, 'all'],
+            //         showPageSizeSelector: true,
+            //         showInfo: true,
+            //         showNavigationButtons: true,
+            //     },
+            // });
+        });
     })
     .catch(error => console.error(error))
 
+
+
+
+//  {
+//         alignment: 'center',
+//         cellTemplate: function (container, options) {
+//             $('<div>')
+//                 .appendTo(container)
+//                 .dxButton({
+//                     text: 'Ventas',
+//                     onClick: function () {
+//                         console.log(options.data.ID);
+//                         window.open(`ventasCliente.html?id=${options.data.ID}`)
+//                     }
+//                 });
+//             $('<div>')
+//                 .appendTo(container)
+//                 .addClass('botones-container')
+//                 .dxButton({
+//                     text: 'Pagos',
+//                     onClick: function () {
+//                         console.log(options.data.ID);
+//                         window.open(
+//                             `pagosCliente.html?id=${options.data.ID}&precioTotal=${options.data.precioTotal}&pagosTotal=${options.data.pagosTotal} `
+//                         )
+//                     }
+//                 });
+//         }
+// }
 
