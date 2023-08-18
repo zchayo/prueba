@@ -1,72 +1,39 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es">
 
 <head>
-  <title>DevExtreme Demo</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
-  <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/23.1.4/css/dx.light.css" />
-  <script src="https://cdn3.devexpress.com/jslib/23.1.4/js/dx.all.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/23.1.4/css/dx.light.css" />
+    <script src="https://cdn3.devexpress.com/jslib/23.1.4/js/dx.all.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Cajas Flexibles</title>
 </head>
 
 <body>
-  <!-- <div class="demo-container"> -->
-  <div id="page">
-    <div id="responsive-box">
-      <div class="header" data-options="dxItem: {
-                    location: [{
-                        row: 0,
-                        col: 0,
-                        colspan: 2,
-                        screen: 'lg'
-                    }, {
-                        row: 0,
-                        col: 0,
-                        screen: 'sm'
-                    }]
-                }">
-        <p>Header</p>
-      </div>
-      <div class="content" data-options="dxItem: {
-                    location: [{
-                        row: 1,
-                        col: 1,
-                        screen: 'lg'
-                    }, {
-                        row: 2,
-                        col: 0,
-                        screen: 'sm'
-                    }]
-                }">
+    <div class="header">Encabezado</div>
 
-        <div id="div1" style='height: 800px; border:none;'>
-          <iframe id="mi-iframe" src="view.graficas.html" style='width:100%; height:100%; border:none;' frameborder="0"></iframe>
+    <div class="contenedor">
+        <div class="caja caja-1">
+            <div id="list" class=' panel-list'></div>
         </div>
+        <div class="caja caja-2">
 
-      </div>
-      <div class="left-side-bar" data-options="dxItem: {
-                    location: [{
-                        row: 1,
-                        col: 0,
-                        screen: 'lg'
-                    }, {
-                        row: 1,
-                        col: 0,
-                        screen: 'sm'
-                    }]
-                }">
+            <div class="boton">
+                <div id="boton"></div>
+            </div>
 
-        <div id="list" class='dx-theme-accent-as-background-color panel-list'></div>
-
-      </div>
+            <iframe id="mi-iframe" src="view.graficas.html" style='width:100%;  border:none;'
+                frameborder="0"></iframe>
+     
+        </div>
     </div>
-  </div>
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>

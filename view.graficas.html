@@ -46,7 +46,7 @@
         </div>
     </div>
 
-  
+
     <script>
 
 
@@ -69,36 +69,47 @@
                 },
             });
 
-            // Resto de tu código para inicializar los gráficos...
             $('#chart').dxChart({
                 dataSource: [
                     {
-                        arg: 1960,
+                        arg: '1960',
                         val: 3032019978,
                     },
                     {
-                        arg: 1970,
+                        arg: '1970',
                         val: 3683676306,
                     },
                     {
-                        arg: 1980,
+                        arg: '1980',
                         val: 4434021975,
                     },
                 ],
+                palette: ['#6e8f85', '#edc68e', '#ebe7a7'],
+                // color: '',
+                commonSeriesSettings: {
+                    type: 'bar',
+                    valueField: 'val',
+                    argumentField: 'arg',
+                    ignoreEmptyPoints: true,
+                },
                 legend: {
                     visible: false,
                 },
-                series: {
-                    type: 'bar',
+                seriesTemplate: {
+                    nameField: 'arg',
                 },
-                argumentAxis: {
-                    tickInterval: 10,
-                    label: {
-                        format: {
-                            type: 'decimal',
-                        },
-                    },
-                },
+
+                // series: {
+                //     type: 'bar',
+                // },
+                // argumentAxis: {
+                //     tickInterval: 10,
+                //     label: {
+                //         format: {
+                //             type: 'decimal',
+                //         },
+                //     },
+                // },
                 title: 'World Population by Decade',
             });
 
@@ -117,7 +128,7 @@
                         val: 4434021975,
                     },
                 ],
-                palette: 'soft',
+                palette: ['#6e8f85', '#edc68e', '#ebe7a7'],
                 legend: {
                     visible: true,
                 },
